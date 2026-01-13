@@ -1,0 +1,130 @@
+/* Header - Glassmorphism Navigation Bar */
+
+.header-container {
+  width: 100%;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #E5E7F3;
+}
+
+.header-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffffeb;
+
+  /* background-image: radial-gradient(circle farthest-corner at 10% 20%,
+    rgb(0 51 102 / 86%) 0%, rgb(0 102 204 / 78%) 49.5%, rgb(8 126 165) 90%); */
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border-radius: 24px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d7dadd;
+  letter-spacing: -0.5px;
+}
+
+.header-nav-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header-nav-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #213448;
+    border: 1px solid #C6C6C6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header-nav-icon:hover {
+  background: #48D4B9;
+  border: 1px solid #ffffff00;
+  color: #feffff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header-nav-icon.active {
+  border: 1px solid #ffffff00;
+  background: #48D4B9;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+  box-shadow:
+    0 4px 12px 0 rgba(255, 255, 255, 0.15),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.75rem 1rem;
+  }
+
+  .header-nav {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-nav-icons {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0.5rem;
+  }
+
+  .header-nav-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.5rem;
+  }
+
+  .header-nav {
+    padding: 0.75rem;
+    border-radius: 16px;
+  }
+
+  .header-nav-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-name {
+    font-size: 1.125rem;
+  }
+}
+
