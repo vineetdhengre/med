@@ -10,7 +10,7 @@ import { webinarsApi } from "../features/webinars/api/webinarsApi";
 
     },
     middleware : (getDefaultMiddleWare) =>  getDefaultMiddleWare().concat(webinarsApi.middleware),
-    devTools : process.env.NODE_ENV !== "production", // dont import process as we are not using nodejs
+    devTools: import.meta.env.DEV, // dont import process as we are not using nodejs
 });
 setupListeners(store.dispatch)
 
