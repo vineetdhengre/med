@@ -1,6 +1,8 @@
-import React from 'react'
+interface SignUpDetailsProps {
+  setToggle: (value: boolean) => void;
+}
 
-export default function SignUpDetails({ setToggle }) {
+export default function SignUpDetails({ setToggle }: SignUpDetailsProps) {
   return (
     <div className="transition-container">
         <h1 className="welcome-title">Welcome back</h1>
